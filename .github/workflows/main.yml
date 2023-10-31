@@ -1,4 +1,4 @@
-name: UnitTests
+name: XcodeBuildTest
 
 on:
   push:
@@ -6,9 +6,12 @@ on:
       - main
 
 jobs:
-  hello-world:
-    name: hello world job
-    runs-on: macos-latest
+  hello-world: # job id
+    name: select os
+    runs-on: macos-13
     steps:
-      - name: hello world
-        run: echo "Hello World"
+      - name: check out
+        uses: actions/checkout@v2
+      - uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: '15.0.0'
