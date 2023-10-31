@@ -18,5 +18,5 @@ jobs:
           xcode-version: '15.0.0'
       - name: show xcode version
         run: xcodebuild -version
-      - name: xcode build
-        run: xcodebuild -project AppGithubActions01.xcodeproj 
+      - name: Build # シミュレーター向けにビルド
+        run: xcodebuild -sdk iphonesimulator -configuration Debug build
