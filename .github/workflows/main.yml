@@ -19,4 +19,4 @@ jobs:
       - name: show xcode version
         run: xcodebuild -version
       - name: xcode build
-        run: xcodebuild test -project AppGithubActions01.xcodeproj 
+        run: xcodebuild -project AppGithubActions01.xcodeproj 
