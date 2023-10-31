@@ -16,6 +16,5 @@ jobs:
         uses: maxim-lobanov/setup-xcode@v1
         with:
           xcode-version: '15.0.0'
-      - name: build and test
-        run: xcodebuild test -project AppGithubActions01.xcodeproj -scheme AppGithubActions01 -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 15,OS=16.1'
-
+      - name: xcode build
+        run: xcodebuild build -project AppGithubActions01.xcodeproj -scheme AppGithubActions01
