@@ -23,5 +23,5 @@ jobs:
           set -o pipefail && xcodebuild -project AppGithubActions01.xcodeproj \
                      -scheme AppGithubActions01 \
                      -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.0' \
-                     -configuration Debug build | bundle exec xcpretty
+                     -configuration Debug build
 
