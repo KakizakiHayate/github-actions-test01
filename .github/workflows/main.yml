@@ -16,6 +16,8 @@ jobs:
         uses: maxim-lobanov/setup-xcode@v1
         with:
           xcode-version: '15.0.1'
+      - name: Decrypt provisioning profile
+        run: echo ${{ secrets.PROVISIONING_PROFILE }} | base64 --decode > profile.mobileprovision
       - name: xcode clean build
         run: xcodebuild clean -project AppGithubActions01.xcodeproj
       - name: xcode build
