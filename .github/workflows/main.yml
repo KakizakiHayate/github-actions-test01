@@ -19,6 +19,5 @@ jobs:
       - name: xcode clean build
         run: xcodebuild clean -project AppGithubActions01.xcodeproj
       - name: xcode build
-        run: xcodebuild -project AppGithubActions01.xcodeproj -target AppGithubActions01 \
-              -sdk iphonesimulator -configuration Debug build
+        run: xcodebuild -project AppGithubActions01.xcodeproj -target AppGithubActions01 -sdk iphonesimulator -configuration Debug build
 
