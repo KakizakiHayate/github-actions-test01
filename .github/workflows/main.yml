@@ -16,6 +16,11 @@ jobs:
         uses: maxim-lobanov/setup-xcode@v1
         with:
           xcode-version: '15.0.1'
+      # 証明書の生成
+      - name: Import Provisioning Profile
+        run: |
+          mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
+          echo -n ${{ secrets.PROVISIONING_PROFILE }} | base64 -d > ~/Library/MobileDevice/Provisioning\ Profiles/distribution.mobileprovision
       - name: xcode build
         run: xcodebuild -project AppGithubActions01.xcodeproj -scheme AppGithubActions01 -destination "platform=iOS Simulator,OS=16.0,name=iPhone 15" -configuration Release build
 
