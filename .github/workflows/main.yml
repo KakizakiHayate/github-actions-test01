@@ -23,3 +23,6 @@ jobs:
       - name: xcode build
         run: |
           xcodebuild -sdk iphonesimulator -configuration Debug -project AppGithubActions01.xcodeproj -scheme AppGithubActions01 -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.0' build
+          # プロビジョニングプロファイルを指定
+          xcodebuild -exportProvisioningProfile "com.hayate.app.AppGithubActions01" -exportPath .
+          export PROVISIONING_PROFILE="com.hayate.app.AppGithubActions01.mobileprovision"
