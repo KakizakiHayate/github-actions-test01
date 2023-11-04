@@ -26,4 +26,4 @@ jobs:
       - name: xcode build
         run: |
           # xcodebuild -sdk iphonesimulator -configuration Debug -project AppGithubActions01.xcodeproj -scheme AppGithubActions01 -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.0' build
-          xcodebuild -sdk iphonesimulator -configuration Debug -workspace AppGithubActions01 -scheme AppGithubActions01 build
+          xcodebuild -sdk iphonesimulator -configuration Debug -project AppGithubActions01.xcodeproj -scheme AppGithubActions01 build
