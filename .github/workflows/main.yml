@@ -20,8 +20,10 @@ jobs:
         run: xcodebuild clean -project AppGithubActions01.xcodeproj
       - name: xcode build
         run: |
-          set -o pipefail && xcodebuild -project AppGithubActions01.xcodeproj \
-                     -scheme AppGithubActions01 \
-                     -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.0' \
-                     -configuration Debug build
+          xcodebuild -sdk iphonesimulator
+                     -configuration Debug
+                    　　-project AppGithubActions01.xcodeproj
+                     -scheme AppGithubActions01
+                     -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.0'
+                     build
 
